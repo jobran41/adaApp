@@ -1,20 +1,20 @@
-import React from "react"
-import Error from "./error"
+import React from "react";
+import Error from "./Error";
 
 export default class GenerallErrorBoundary extends React.Component {
   state = {
-    hasError: false,
-  }
+    hasError: false
+  };
 
   render() {
     if (this.state.hasError) {
-      return <Error />
+      return <Error />;
     } else {
-      return this.props.children
+      return this.props.children;
     }
   }
 
   componentDidCatch(error, info) {
-    this.setState({ hasError: true })
+    this.setState({ hasError: true });
   }
 }

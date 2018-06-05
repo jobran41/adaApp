@@ -1,0 +1,13 @@
+@import "~reset-css/reset";
+
+* {
+  box-sizing: border-box;
+}
+
+@import "~styles/globals";
+
+.md-text-capitalize {
+  text-transform: capitalize !important;
+}
+
+@include react-md-everything;
