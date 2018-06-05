@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
+import { Button } from "react-md";
 
 import * as routes from "libs/constants/routes";
 import TopBar from "../top-bar";
@@ -8,14 +9,37 @@ import Dashboard from "../dashboard";
 import Aquarium from "../aquarium";
 import Search from "../search";
 
+import "./Container.scss";
+
 export default class Container extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { sideBarIsTrue: true };
+  }
+  toggleSideBar = isTrue => {
+    this.setState({ sideBarIsTrue: !isTrue });
+  };
   render() {
+    const { sideBarIsTrue } = this.state;
     return (
-      <div className="Container">
+      <div className="App-container">
         <TopBar />
-        <div className="App-container">
-          <div className="sideBar">sideBar</div>
-          <div className="content">
+        <div className="container">
+          <div
+            className={`${
+              sideBarIsTrue ? "sideBarOut sideBar" : "sideBarIn sideBar"
+            } `}
+          >
+            sideBar
+          </div>
+          <div
+            className={`${
+              sideBarIsTrue ? "sideBarOut content" : "sideBarIn content"
+            } `}
+          >
+            <Button flat onClick={() => this.toggleSideBar(sideBarIsTrue)}>
+              bt
+            </Button>
             <Switch>
               <Route
                 exact
