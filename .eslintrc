@@ -10,6 +10,6 @@
       "error",
       "never"
     ],
-    "no-console": "error"
+    "no-console": "warn"
   }
 }
