@@ -7,7 +7,6 @@ import createHistory from "history/createBrowserHistory";
 import { routerMiddleware } from "react-router-redux";
 
 //import mutation from "modules/mutate/reducers"
-//import sessionReducer from 'modules/auth/session';
 import userReducer from "modules/auth/user";
 
 const history = createHistory();
