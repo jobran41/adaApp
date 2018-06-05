@@ -62,7 +62,6 @@ class Navigation extends Component {
   );
   render() {
     const { authUser } = this.props
-    console.log("test")
     return (
       <div className="Navigation">
         {authUser ? this.NavigationAuth() : this.NavigationNonAuth()}
