@@ -19,7 +19,7 @@ export default handleActions(
       const { moduleName, mutationName, key, value } = payload
       if (!(moduleName in state)) {
         state[moduleName] = {
-          [mutationName]: {},
+          [mutationName]: {}
         }
       }
       if (!(mutationName in state[moduleName])) {
@@ -29,12 +29,12 @@ export default handleActions(
         [moduleName]: {
           [mutationName]: {
             [key]: {
-              $set: value,
-            },
-          },
-        },
+              $set: value
+            }
+          }
+        }
       })
-    },
+    }
   },
-  initial,
+  initial
 )

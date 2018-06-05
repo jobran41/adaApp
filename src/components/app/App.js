@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import GeneralErrorBoundary from "components/general-error-boundary";
-import { withRouter } from "react-router";
-import { Switch, Route, Redirect } from "react-router-dom";
+import React, { Component } from "react"
+import GeneralErrorBoundary from "components/general-error-boundary"
+import { withRouter } from "react-router"
+import { Switch, Route, Redirect } from "react-router-dom"
 
-import * as routes from "libs/constants/routes";
+import * as routes from "libs/constants/routes"
 
-import SignIn from "../auth/signIn";
-import SignUp from "../auth/signUp";
-import Container from "../container";
+import SignIn from "../auth/signIn"
+import SignUp from "../auth/signUp"
+import Container from "../container"
 //import logo from "./logo.svg";
-import "./App.scss";
+import "./App.scss"
 
 @withRouter
 class App extends Component {
@@ -29,8 +29,8 @@ class App extends Component {
           </Switch>
         </div>
       </GeneralErrorBoundary>
-    );
+    )
   }
 }
 
-export default App;
+export default App

@@ -5,6 +5,6 @@ export const updateMutation = createAction(
     moduleName,
     mutationName,
     key,
-    value,
-  }),
+    value
+  })
 )

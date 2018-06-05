@@ -1,10 +1,10 @@
-import { Button } from "react-md";
-import { connect } from "react-redux";
-import { withRouter } from "react-router";
+import { Button } from "react-md"
+import { connect } from "react-redux"
+import { withRouter } from "react-router"
 
-import * as routes from "libs/constants/routes";
+import * as routes from "libs/constants/routes"
 
-import React, { Component } from "react";
+import React, { Component } from "react"
 
 @withRouter
 @connect(({ userState }) => ({
@@ -12,8 +12,8 @@ import React, { Component } from "react";
 }))
 class Navigation extends Component {
   pushurl = url => {
-    const { history } = this.props;
-    history.push(url);
+    const { history } = this.props
+    history.push(url)
   };
   NavigationAuth = () => (
     <div className="menu-withLogin">
@@ -61,13 +61,13 @@ class Navigation extends Component {
     </div>
   );
   render() {
-    const { authUser } = this.props;
+    const { authUser } = this.props
     return (
       <div className="Navigation">
         {authUser ? this.NavigationAuth() : this.NavigationNonAuth()}
       </div>
-    );
+    )
   }
 }
 
-export default Navigation;
+export default Navigation

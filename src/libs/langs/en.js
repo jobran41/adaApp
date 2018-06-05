@@ -1,4 +1,4 @@
-import l from "libs/langs/keys";
+import l from "libs/langs/keys"
 
 export default {
   date: {
@@ -7,4 +7,4 @@ export default {
     }
   },
   [l.errorMessage]: "Oops, it seems that there is an error!"
-};
+}
