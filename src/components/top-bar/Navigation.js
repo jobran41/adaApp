@@ -13,19 +13,19 @@ const Navigation = ({ authUser }) => (
 const NavigationAuth = () => (
   <ul>
     <li>
-      <Link to={routes.Dashboard}>Dashboard</Link>
+      <Link to={`${routes.Container}${routes.Dashboard}`}>Dashboard</Link>
     </li>
     <li>
-      <Link to={routes.Aquarium}>Aquarium</Link>
+      <Link to={`${routes.Container}${routes.Aquarium}`}>Aquarium</Link>
     </li>
     <li>
-      <Link to={routes.Form}>Form</Link>
+      <Link to={`${routes.Container}${routes.Form}`}>Form</Link>
     </li>
     <li>
-      <Link to={routes.Lab}>Lab</Link>
+      <Link to={`${routes.Container}${routes.Lab}`}>Lab</Link>
     </li>
     <li>
-      <Link to={routes.Search}>Search</Link>
+      <Link to={`${routes.Container}${routes.Search}`}>Search</Link>
     </li>
   </ul>
 );
