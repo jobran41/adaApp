@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Switch, Route, Redirect } from "react-router-dom"
 import { Button } from "react-md"
+import { withRouter } from "react-router"
 
 import * as routes from "libs/constants/routes"
 import TopBar from "../top-bar"
@@ -8,9 +9,12 @@ import Counter from "../counter/Counter"
 import Dashboard from "../dashboard"
 import Aquarium from "../aquarium"
 import Search from "../search"
+import SideBar from "../sideBar"
+import { dataSideBar } from "../sideBar/helpers"
 
 import "./Container.scss"
 
+@withRouter
 export default class Container extends Component {
   constructor(props) {
     super(props)
@@ -18,6 +22,10 @@ export default class Container extends Component {
   }
   toggleSideBar = isTrue => {
     this.setState({ sideBarIsTrue: !isTrue })
+  };
+  logout = () => {
+    const { history } = this.props
+    history.push("/")
   };
   render() {
     const { sideBarIsTrue } = this.state
@@ -30,7 +38,7 @@ export default class Container extends Component {
               sideBarIsTrue ? "sideBarOut sideBar" : "sideBarIn sideBar"
               } `}
           >
-            sideBar
+            <SideBar data={dataSideBar} logout={this.logout} />
           </div>
           <div
             className={`${

@@ -1,0 +1,38 @@
+.SideBar {
+    .SideBar-header {
+        padding: 20px;
+        background: #1665c1;
+        ;
+        .SideBar-header-info {
+            display: flex;
+            justify-content: center;
+            .SideBar-header-avatar {
+                text-align: center;
+                .SideBar-avatar {
+                    height: 80px;
+                    width: 80px;
+                }
+            }
+            .SideBar-header-description {
+                text-align: center
+            }
+        }
+        .LinearProgress-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -10px;
+        }
+    }
+    .SideBar-body {
+        padding: 20px;
+        background: gray;
+        border-bottom: 1px solid #eee
+    }
+    .SideBar-footer {
+        padding: 20px;
+        background: gray;
+        button {
+            width: 215px;
+        }
+    }
+}
