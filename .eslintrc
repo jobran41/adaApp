@@ -1,6 +1,14 @@
 {
-    "extends": [
-        "react-app",
-        "plugin:prettier/recommended"
+  "extends": [
+    "react-app"
+  ],
+  "rules": {
+    "no-var": [
+      "error"
+    ],
+    "semi": [
+      "error",
+      "never"
     ]
+  }
 }

@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import React, { Component } from "react"
+import { Switch, Route, Redirect } from "react-router-dom"
 
-import * as routes from "libs/constants/routes";
-import TopBar from "../top-bar";
-import Counter from "../counter/Counter";
-import Dashboard from "../dashboard";
-import Aquarium from "../aquarium";
-import Search from "../search";
+import * as routes from "libs/constants/routes"
+import TopBar from "../top-bar"
+import Counter from "../counter/Counter"
+import Dashboard from "../dashboard"
+import Aquarium from "../aquarium"
+import Search from "../search"
 
 export default class Container extends Component {
   render() {
@@ -54,6 +54,6 @@ export default class Container extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

@@ -1,14 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+import React from "react"
+import { Link } from "react-router-dom"
+import { connect } from "react-redux"
 
-import * as routes from "libs/constants/routes";
+import * as routes from "libs/constants/routes"
 
 const Navigation = ({ authUser }) => (
   <div className="Navigation">
     {authUser ? <NavigationAuth /> : <NavigationNonAuth />}
   </div>
-);
+)
 
 const NavigationAuth = () => (
   <ul>
@@ -28,7 +28,7 @@ const NavigationAuth = () => (
       <Link to={`${routes.Container}${routes.Search}`}>Search</Link>
     </li>
   </ul>
-);
+)
 
 const NavigationNonAuth = () => (
   <ul>
@@ -39,10 +39,10 @@ const NavigationNonAuth = () => (
       <Link to={routes.SIGN_IN}>Sign In</Link>
     </li>
   </ul>
-);
+)
 
 const mapStateToProps = state => ({
   authUser: state.userState.users
-});
+})
 
-export default connect(mapStateToProps)(Navigation);
+export default connect(mapStateToProps)(Navigation)

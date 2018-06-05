@@ -1,4 +1,4 @@
 export default ["errorMessage"].reduce((r, i) => {
-  r[i] = i;
-  return r;
-}, {});
+  r[i] = i
+  return r
+}, {})

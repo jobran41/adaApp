@@ -1,2 +1,2 @@
-import Aquarium from "./Aquarium";
-export default Aquarium;
+import Aquarium from "./Aquarium"
+export default Aquarium
