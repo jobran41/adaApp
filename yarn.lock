@@ -7072,6 +7072,10 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
+tiny-cookie@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.npmjs.org/tiny-cookie/-/tiny-cookie-2.1.2.tgz#3c25689a07c76438f90209648c143976b0b52bef"
+
 tmp@^0.0.33:
   version "0.0.33"
   resolved "https://registry.npmjs.org/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"

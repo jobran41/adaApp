@@ -1,0 +1,50 @@
+.topBar {
+    width: 100%;
+    background-color: gray;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 2px 0 2px 24px;
+    height: 48px;
+    flex: 0 0 auto;
+    & .md-icon {
+        color: white;
+    }
+    & .md-tile-content {
+        flex-grow: 0;
+    }
+    .topBar-logo {
+        width: 5%;
+        .topBar-logo-avatar {
+            border: none;
+            width: 100px;
+            background: transparent;
+        }
+    }
+    .Navigation {
+        width: 80%;
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+            li {
+                a {
+                    padding: 16px;
+                }
+            }
+        }
+    }
+    .topBar-info {
+        width: 15%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .apptitlebar-collapse-btn {
+            border-radius: 0;
+            height: 100%;
+            width: 24px;
+            padding: 0;
+        }
+    }
+}
