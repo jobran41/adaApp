@@ -1,4 +1,4 @@
-.ams-error-msg-wrapper {
+.error-msg-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.ams-error-msg {
+.error-msg {
     color: #666;
     text-align: center;
     margin-top: 0.6rem;

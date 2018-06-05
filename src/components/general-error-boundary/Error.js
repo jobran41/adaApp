@@ -8,10 +8,9 @@ import "./style.css";
 export default class Error extends React.PureComponent {
   render() {
     const { className, ...attrs } = this.props;
-
     return (
-      <div className={cls("ams-error-msg-wrapper", className)} {...attrs}>
-        <div className="ams-error-msg">oops erreur{i18n.t(l.errorMessage)}</div>
+      <div className={cls("error-msg-wrapper", className)} {...attrs}>
+        <div className="error-msg">{i18n.t(l.errorMessage)}</div>
       </div>
     );
   }
