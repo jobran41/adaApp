@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { LinearProgress, Avatar, Button } from "react-md";
+import React, { Component } from "react"
+import { LinearProgress, Avatar, Button } from "react-md"
 
-import Logo from "images/logo.png";
+import Logo from "images/logo.png"
 
-import "./SideBar.scss";
+import "./SideBar.scss"
 
 //todo proptype with action information and Edit
 export default class SideBar extends Component {
@@ -17,19 +17,19 @@ export default class SideBar extends Component {
       badget,
       grade,
       ProgressBar: { level, indicatorMax, indicatorMin }
-    } = this.props.data;
-    const { logout } = this.props;
+    } = this.props.data
+    const { logout } = this.props
     const socialLocal = social.map((item, i) => {
-      return <li key={i}>{item}</li>;
-    });
+      return <li key={i}>{item}</li>
+    })
     const badgetLocal = badget.map((item, i) => {
       return (
         <Avatar key={i} className="SideBar-budges-avatar">
           {" "}
           {item}
         </Avatar>
-      );
-    });
+      )
+    })
     return (
       <div className="SideBar">
         <div className="SideBar-header">
@@ -84,6 +84,6 @@ export default class SideBar extends Component {
           </Button>
         </div>
       </div>
-    );
+    )
   }
 }

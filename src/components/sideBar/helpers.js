@@ -7,4 +7,4 @@ export const dataSideBar = {
   social: ["GITHUB", "TWITTER", "TECHNOLOGIE CSS"],
   badget: ["a", "b", "c", "d"],
   grade: "senior"
-};
+}
