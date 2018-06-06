@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { Avatar, Button, Paper } from 'react-md'
+import { Avatar, Paper } from 'react-md'
 import Calendar from "rc-calendar"
 
 import Logo from "images/logo.png"
-
 
 import "rc-calendar/assets/index.css"
 import './CalenderProfile.scss'
@@ -14,8 +13,6 @@ export default class Instructor extends Component {
         super(props)
         this.state = { dataLocal: this.props.data }
     }
-
-
     render() {
         const {
             profileName,
