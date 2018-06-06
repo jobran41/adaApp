@@ -16,34 +16,39 @@ class Navigation extends Component {
     history.push(url)
   };
   NavigationAuth = () => (
-    <div className="menu-withLogin">
+    <div className="menu-withLogin md-cell md-cell--8 md-cell--2-offset">
       <Button
         onClick={() => this.pushurl(`${routes.Container}${routes.Dashboard}`)}
-        raised
+        flat
+        className="menuButton"
       >
         Dashboard
       </Button>
       <Button
         onClick={() => this.pushurl(`${routes.Container}${routes.Aquarium}`)}
-        raised
+        flat
+        className="menuButton"
       >
         Aquarium
       </Button>
       <Button
         onClick={() => this.pushurl(`${routes.Container}${routes.Lab}`)}
-        raised
+        flat
+        className="menuButton"
       >
         Lab
       </Button>
       <Button
         onClick={() => this.pushurl(`${routes.Container}${routes.Form}`)}
-        raised
+        flat
+        className="menuButton"
       >
         Form
       </Button>
       <Button
         onClick={() => this.pushurl(`${routes.Container}${routes.Search}`)}
-        raised
+        flat
+        className="menuButton"
       >
         Search
       </Button>

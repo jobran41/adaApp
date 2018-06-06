@@ -1,20 +1,60 @@
-$primary: #1665c1;
-$secondary: #939393;
-$white: #fff;
-$grey: #eeedee;
-$greySeconday: #e0e0e0;
-$menuGrey: #e1e1e0;
-$dark: #1e1e1e;
-$lightBlue: #0084bf;
-$highlightBlue: #e6f0ff;
-$red: red;
-$success: #5cb85c;
-$greyOfTaskBackground: #f2f2f2;
-$greyOfTaskText: #545454;
-$darkGrey: #636466;
-$bgAssetManagement: #eeeeee;
-$colorTextManagementAsset: #666666;
-$borderAssetManagement: #aaaaaa;
-$dialogDiscuss: #98b8e5;
-$greenColor: #64ffda;
-$errorColor: #f50057;
+$blue: #2a7bdb;
+$lightBlue: #149fed;
+$green: #1de9b6;
+$lightGreen: #00fbc8;
+$yellow: #f5c228;
+$red: #f44236;
+$purple: #a389da;
+$lightPurple: #c2a5ff;
+
+$darker: #202224;
+$darkGrey: #393c40;
+$grey: #6f7379;
+$lightGrey: #aaaeb3;
+$highlightGrey: #c6cacf;
+$backgroundLightGrey: #ebebeb;
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/CenturyGothic-Bold.woff2") format("woff2"),
+    url("../fonts/CenturyGothic-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/CenturyGothic-Italic.woff2") format("woff2"),
+    url("../fonts/CenturyGothic-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/CenturyGothic-BoldItalic.woff2") format("woff2"),
+    url("../fonts/CenturyGothic-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/CenturyGothic.woff2") format("woff2"),
+    url("../fonts/CenturyGothic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  background: $backgroundLightGrey;
+}
