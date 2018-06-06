@@ -10,6 +10,7 @@ import Dashboard from "../dashboard"
 import Aquarium from "../aquarium"
 import Search from "../search"
 import SideBar from "../sideBar"
+import Instructor from "../instructor"
 import { dataSideBar } from "../sideBar/helpers"
 
 import "./Container.scss"
@@ -81,6 +82,11 @@ export default class Container extends Component {
                 exact
                 path={`${routes.Container}${routes.Search}`}
                 component={Search}
+              />
+              <Route
+                exact
+                path={`${routes.Container}${routes.Instructor}`}
+                component={Instructor}
               />
             </Switch>
           </div>
