@@ -1,7 +1,7 @@
-.Instructor {
+.Aquarium {
   display: flex;
   .Instructor-CalendarComponent {
-    width: 80%;
+    width: 100%;
     border: none;
     .rc-calendar-input-wrap {
       display: none;
@@ -22,6 +22,20 @@
       .rc-calendar-footer {
         display: none;
       }
+    }
+  }
+  .SideBar-header-info {
+    display: flex;
+    justify-content: center;
+    .SideBar-header-avatar {
+      text-align: center;
+      .SideBar-avatar {
+        height: 80px;
+        width: 80px;
+      }
+    }
+    .SideBar-header-description {
+      text-align: center;
     }
   }
 }

@@ -1,4 +1,4 @@
-export const dataAquarium = [{
+export const dataWorkShop = [{
   task: "lorem ipsume",
   date: "12 april 16:10",
   tag: "#css",

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Calendar from "rc-calendar"
 
-import StudentsList from 'components/list/students'
-import AquariumList from 'components/list/aquarium'
-import { dataSideBar } from 'components/list/students/helpers'
-import { dataAquarium } from 'components/list/aquarium/helpers'
+import StudentsList from './components/students'
+import WorkShopList from './components/workShop'
+import { dataSideBar } from './components/students/helpers'
+import { dataWorkShop } from './components/workShop/helpers'
 
 import "rc-calendar/assets/index.css"
 import "./Instructor.scss"
@@ -14,12 +14,12 @@ export default class Instructor extends Component {
         return (
             <div className="Instructor">
                 <StudentsList data={dataSideBar} />
-                <div className="cl">
+                <div className="rightContent">
                     <Calendar
                         className="Instructor-CalendarComponent"
                         onSelect={this.onStandaloneSelect}
                     />
-                    <AquariumList data={dataAquarium} />
+                    <WorkShopList data={dataWorkShop} />
                 </div>
             </div>
         )

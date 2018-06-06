@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Button } from 'react-md'
 import Panel from 'components/panel'
 
-import './Aquarium.scss'
+import './WorkShop.scss'
 
 export default class Aquarium extends Component {
     constructor(props) {
@@ -14,7 +14,7 @@ export default class Aquarium extends Component {
         const { dataLocal } = this.state
         if (Array.isArray(dataLocal)) {
             const d = dataLocal.map((item, i) => {
-                return (<div className="AquariumList" key={i}>
+                return (<div className="WorkShopList" key={i}>
                     <div className="task">{item.task}</div>
                     <div className="date">{item.date}</div>
                     <div className="tag">{item.tag}</div>

@@ -93,8 +93,6 @@ class SideBar extends Component {
               </div>
             </div>
           }
-
-
         </div>
         <div className="SideBar-body">
           <ul className="socialLink">{this.renderSocial()}</ul>
