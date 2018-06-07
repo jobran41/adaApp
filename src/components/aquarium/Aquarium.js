@@ -11,8 +11,6 @@ import { dataInstructor } from './components/instructor/helpers'
 import { dataProfile } from './components/calenderProfile/helpers'
 import { dataLiveSession } from './components/liveSession/helpers'
 
-
-
 import "./Aquarium.scss"
 
 export default class Aquarium extends Component {
