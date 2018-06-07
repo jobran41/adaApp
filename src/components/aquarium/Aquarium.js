@@ -4,8 +4,12 @@ import { TabsContainer, Tabs, Tab } from 'react-md'
 
 import CalenderProfile from './components/calenderProfile'
 import InstructorList from './components/instructor'
+import LiveSession from './components/liveSession'
+import DetailSession from './components/detailSession'
+
 import { dataInstructor } from './components/instructor/helpers'
 import { dataProfile } from './components/calenderProfile/helpers'
+import { dataLiveSession } from './components/liveSession/helpers'
 
 
 
@@ -24,7 +28,10 @@ export default class Aquarium extends Component {
               </div>
             </Tab>
             <Tab label="Live Coding">
-              <h3>Now look at me!</h3>
+              <div className="Aquarium-tabsLiveSession">
+                <LiveSession data={dataLiveSession} />
+                <DetailSession />
+              </div>
             </Tab>
           </Tabs>
         </TabsContainer>

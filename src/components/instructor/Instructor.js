@@ -6,6 +6,7 @@ import WorkShopList from './components/workShop'
 import { dataSideBar } from './components/students/helpers'
 import { dataWorkShop } from './components/workShop/helpers'
 
+
 import "rc-calendar/assets/index.css"
 import "./Instructor.scss"
 
