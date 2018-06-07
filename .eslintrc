@@ -10,7 +10,7 @@
       "error",
       "never"
     ],
-    "no-console": "error",
+    "no-console": "warn",
     "no-unexpected-multiline": "error"
   }
 }
