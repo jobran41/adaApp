@@ -1,0 +1,23 @@
+.App-container {
+  .container {
+    display: flex;
+    .sideBar {
+      width: 20%;
+      &.sideBarOut {
+        display: block;
+      }
+      &.sideBarIn {
+        display: none;
+      }
+    }
+    .content {
+      width: 80%;
+      &.sideBarOut {
+        width: 80%;
+      }
+      &.sideBarIn {
+        width: 100%;
+      }
+    }
+  }
+}
