@@ -2,13 +2,14 @@ import React, { Component } from "react"
 import { TabsContainer, Tabs, Tab } from "react-md"
 
 import FirstTab from "./first-tab"
+import "./Dashboard.scss"
 
 export default class Dashboard extends Component {
   render() {
     return (
-      <div className="Dashboard">
-        <TabsContainer panelClassName="md-grid" colored>
-          <Tabs tabId="simple-tab">
+      <div className="md-cell md-cell--10 Dashboard">
+        <TabsContainer panelClassName="md-grid">
+          <Tabs tabId="simple-tab" className="Dashboard-tabs">
             <Tab label="Tab 1">
               <FirstTab />
             </Tab>

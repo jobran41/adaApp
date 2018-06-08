@@ -1,10 +1,12 @@
 import React, { Component } from "react"
 import { LinearProgress, Button } from "react-md"
 
+import "./card-item.scss"
+
 export default class CardItem extends Component {
   renderHashtag = () => {
     const { hashtags } = this.props
-    return hashtags.map(h => `#${h}`)
+    return hashtags.map(h => `#${h} `)
   };
   render() {
     const { title, progress, skillC, skillL } = this.props
@@ -18,9 +20,7 @@ export default class CardItem extends Component {
           <div className="common-details-items">{skillC}% skills completed</div>
           <div className="common-details-items">{skillL}% skills left</div>
         </div>
-        <Button flat primary iconChildren="chat_bubble_outline">
-          Flight
-        </Button>
+        <Button icon iconClassName="mdi mdi-telegram" className="card-button"/>
       </div>
     )
   }

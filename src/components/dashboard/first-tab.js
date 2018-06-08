@@ -2,8 +2,11 @@ import React, { Component } from "react"
 
 import CardItem from "./components/card-item"
 import LessonItem from "./components/lesson-item"
+import img1 from "images/image1.jpg"
 import { lesson, lessons } from "./helpers"
 import { Button } from "react-md"
+
+import "./Dashboard.scss"
 
 export default class FirstTab extends Component {
   state = {
@@ -21,29 +24,29 @@ export default class FirstTab extends Component {
     const { view } = this.state
     return (
       <div className="first-tab">
-        <div className="top-position">
-          <div className="img-left" />
-          <div className="card-right">
+        <div className="top-position md-grid">
+          <div className="img-left md-cell md-cell--4 md-cell--12-tablet" >
+            <img alt="" src={ img1 } />
+          </div>
+          <div className="card-right md-cell md-cell--8 md-cell--12-tablet">
             <CardItem {...lesson} />
           </div>
         </div>
-        <div className="bottom-position">
+        <div className="bottom-position md-grid">
           <div className="gp-button">
             <Button
-              flat
-              primary
-              iconChildren="chat_bubble_outline"
+              icon
+              className="switchView"
               onClick={() => this.switchView("cards")}
             >
-              Flight
+              dashboard
             </Button>
             <Button
-              flat
-              primary
-              iconChildren="chat_bubble_outline"
+              icon
+              className="switchView"
               onClick={() => this.switchView("tree")}
             >
-              Flight
+              view_list
             </Button>
           </div>
           {view === "cards" && this.renderLessons()}

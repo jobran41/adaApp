@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Button, Avatar } from "react-md"
 import { cls } from "reactutils"
-import Logo from "images/logo.png"
+//import Logo from "images/logo.png"
 import * as cookies from "tiny-cookie"
 import { withRouter } from "react-router-dom"
 import Navigation from "./Navigation"
@@ -17,12 +17,12 @@ export default class TopBar extends Component {
 
     return (
       <div className="topBar">
-        <div className="topBar-logo">
-          <Avatar className="topBar-logo-avatar" src={Logo} />
+        <div className="topBar-logo">        
+          <span>ada.</span>
         </div>
         <Navigation />
         <div className="topBar-info">
-          <Avatar className="title-bar-item-right-space-half" suffix="blue">
+          <Avatar className="title-bar-item-right-space-half" suffix="light-blue">
             {letter}
           </Avatar>
           <div className="nameStudent">Jobran amairi</div>

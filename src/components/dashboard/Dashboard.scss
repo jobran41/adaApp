@@ -1,0 +1,79 @@
+@import "../../Themes/first";
+
+.Dashboard {
+  &.md-cell {
+    margin: 8px auto;
+  }
+}
+.Dashboard-tabs {
+  &.md-tabs {
+    padding: 0 23px;
+    margin-bottom: 20px;
+  }
+  li {
+    max-width: fit-content;
+    min-width: auto;
+    padding: 0 7px 7px;
+    color: $grey;
+    .md-tab-label {
+      font-size: 15px;
+    }
+    &.md-tab--active {
+      color: $blue;
+      .md-tab-label {
+        font-weight: bold;
+      }
+    }
+  }
+  .md-tab-indicator {
+    background: $blue;
+  }
+}
+
+.first-tab {
+  width: 100%;
+  .top-position {
+    background: white;
+    padding: 0;
+    margin: 0 16px;
+    .img-left {
+      overflow: hidden;
+      max-height: 230px;
+      margin: 0;
+      &.md-cell--12-tablet {
+        @media (max-width: 839px) and (min-width: 600px) {
+          width: auto;
+        }
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .card-right {
+      margin: 16px;
+      padding-left: 16px;
+      @media (max-width: 839px) and (min-width: 600px) {
+        padding-top: 16px;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.bottom-position {
+  position: relative;
+  &.md-grid {
+    padding-top: 60px;
+  }
+  .gp-button {
+    position: absolute;
+    top: 18px;
+    right: 14px;
+    .switchView {
+      background: white;
+      border-radius: 0;
+      margin-right: 2px;
+    }
+  }
+}
