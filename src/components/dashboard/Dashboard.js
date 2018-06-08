@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { TabsContainer, Tabs, Tab } from "react-md"
 
 import FirstTab from "./first-tab"
+import SecondTab from "./second-tab"
 
 export default class Dashboard extends Component {
   render() {
@@ -13,7 +14,7 @@ export default class Dashboard extends Component {
               <FirstTab />
             </Tab>
             <Tab label="Tab 2">
-              <h3>Now look at me!</h3>
+              <SecondTab />
             </Tab>
             <Tab label="Tab 3">
               <h3>Now look at me!</h3>

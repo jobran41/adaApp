@@ -20,3 +20,16 @@ export const lessons = [
     description: "lorem ipsum description"
   }
 ]
+
+export const agenda = {
+  title: "Agenda",
+  description: "Weekly events",
+  events: [
+    {
+      createdAt: {
+        day: 20,
+        month: "April"
+      }
+    }
+  ]
+}
