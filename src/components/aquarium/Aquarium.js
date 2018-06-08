@@ -18,7 +18,7 @@ import "./Aquarium.scss"
 export default class Aquarium extends Component {
   render() {
     return (
-      <div className="Aquarium">
+      <div className="md-cell md-cell--10 Aquarium">
         <TabsContainer panelClassName="md-grid" colored>
           <Tabs tabId="simple-tab" >
             <Tab label="Insctroctor">

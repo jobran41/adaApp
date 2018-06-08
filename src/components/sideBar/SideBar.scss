@@ -1,19 +1,38 @@
+@import "../../Themes/first";
+
 .SideBar {
+  hr {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  position: relative;
+  background: $darker;
+  min-height: 100%;
   .SideBar-header {
     padding: 20px;
-    background: #1665c1;
+    background: $blue;
     .SideBar-header-info {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      max-width: 250px;
+      margin: auto;
+      color: white;
+      h5,
+      p {
+        color: white;
+        margin: 0;
+      }
       .SideBar-header-avatar {
-        text-align: center;
+        text-align: left;
         .SideBar-avatar {
           height: 80px;
           width: 80px;
         }
       }
       .SideBar-header-description {
-        text-align: center;
+        text-align: left;
       }
     }
     .LinearProgress-details {
@@ -21,17 +40,79 @@
       justify-content: space-between;
       margin-top: -10px;
     }
+    .skillProgress {
+      max-width: 250px;
+      margin: auto;
+      .md-progress {
+        background: #82b9f5;
+        .md-progress--linear-active {
+          background: #115bba;
+        }
+      }
+      .LinearProgress-details {
+        font-size: 12px;
+        color: #fff;
+      }
+    }
   }
   .SideBar-body {
-    padding: 20px;
-    background: gray;
-    border-bottom: 1px solid #eee;
+    padding: 10px 0px;
+    color: #bfbfbf;
+
+    .SideBar-block {
+      margin: 0 auto;
+      padding: 10px 20px;
+      max-width: 290px;
+      list-style: none;
+    }
+    .budges {
+      .budges-header {
+        font-size: 12px;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      .budges-container {
+        display: flex;
+        justify-content: space-between;
+        .SideBar-budges-avatar {
+          margin-left: 10px;
+          margin-bottom: 10px;
+          color: #555;
+          background: #fff;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    .grade {
+      display: flex;
+      justify-content: space-between;
+      h5,
+      p {
+        margin: 0;
+      }
+      h5 {
+        color: #bfbfbf;
+      }
+      p {
+        color: #115bba;
+      }
+    }
   }
   .SideBar-footer {
     padding: 20px;
-    background: gray;
+    max-width: 290px;
+    margin: 0 auto;
+    color: #bfbfbf;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
     button {
-      width: 215px;
+      flex-grow: 1;
+      &.md-text {
+        color: #bfbfbf;
+      }
     }
   }
 }
