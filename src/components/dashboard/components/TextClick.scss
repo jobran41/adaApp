@@ -1,0 +1,12 @@
+.text-click {
+  .text-click-icon {
+    &.hidden {
+      display: none;
+    }
+  }
+  .text-click-text {
+    &.hidden {
+      display: none;
+    }
+  }
+}
