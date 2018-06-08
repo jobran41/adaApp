@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 
 import EventItem from "./components/event-item"
-import { agenda, feedback } from "./helpers"
+import TextClick from "./components/text-click"
+import { agenda, feedback, notes } from "./helpers"
 
 export default class SecondTab extends Component {
   renderEventItem = () => {
@@ -16,6 +17,23 @@ export default class SecondTab extends Component {
             <div className="bloc-description">{agenda.description}</div>
           </div>
           <div className="bloc-content">{this.renderEventItem()}</div>
+        </div>
+        <div className="bloc feedback">
+          <div className="bloc-header">
+            <div className="bloc-title">{feedback.title}</div>
+            <div className="bloc-description">{feedback.description}</div>
+          </div>
+          <div className="bloc-content">
+            <TextClick />
+          </div>
+        </div>
+        <div className="bloc notes">
+          <div className="bloc-header">
+            <div className="bloc-title">{notes.title}</div>
+          </div>
+          <div className="bloc-content">
+            <TextClick />
+          </div>
         </div>
       </div>
     )
