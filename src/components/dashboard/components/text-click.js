@@ -19,11 +19,12 @@ export default class TextClick extends Component {
           className={cx("text-click-icon", { hidden: switchView !== "icon" })}
         >
           <Button
-            icon
-            className="switchView"
+            flat
+            className="text-click-button"
+            iconChildren="border_color"
             onClick={() => this.setState({ switchView: "text" })}
           >
-            view_list
+            Click to write text
           </Button>
         </div>
         <div
@@ -31,11 +32,10 @@ export default class TextClick extends Component {
         >
           <TextField
             id="autoresizing-2"
-            label="Multiline text field"
-            placeholder="Some placeholder"
-            rows={5}
+            label="Your text hier"
+            rows={3}
           />
-          <Button raised className="submit">
+          <Button flat className="text-click-submit">
             Submit
           </Button>
         </div>

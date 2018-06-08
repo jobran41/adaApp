@@ -77,3 +77,47 @@
     }
   }
 }
+
+.second-tab {
+  flex-grow: 1;
+  .bloc {
+    flex-grow: 1;
+    background: white;
+    margin-bottom: 16px;
+    padding: 15px 15px 0;
+    color: $grey;
+    .bloc-header {
+      border-bottom: 1px solid $highlightGrey;
+      padding-bottom: 15px;
+      .bloc-title {
+        font-size: 20px;
+      }
+    }
+    .bloc-content {
+      .event-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid $backgroundLightGrey;
+        .event-item-date {
+          font-size: 20px;
+          margin-left: 10px;
+          .event-item-day {
+            font-size: 22px;
+            font-weight: bold;
+          }
+        }
+        .event-item-title {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .side-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+  }
+}
