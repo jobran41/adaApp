@@ -54,9 +54,17 @@ class Navigation extends Component {
       </Button>
       <Button
         onClick={() => this.pushurl(`${routes.Container}${routes.Instructor}`)}
-        raised
+        flat
+        className="menuButton"
       >
         Instructor
+      </Button>
+      <Button
+        onClick={() => this.pushurl(`${routes.Container}${routes.Tuto}`)}
+        flat
+        className="menuButton"
+      >
+        Tuto
       </Button>
     </div>
   );

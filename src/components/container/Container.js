@@ -12,6 +12,7 @@ import Search from "../search"
 import SideBar from "../sideBar"
 import Instructor from "../instructor"
 import { dataSideBar } from "../sideBar/helpers"
+import Tutorial from "../tutorial"
 
 import "./Container.scss"
 
@@ -37,14 +38,14 @@ export default class Container extends Component {
           <div
             className={`${
               sideBarIsTrue ? "sideBarOut sideBar" : "sideBarIn sideBar"
-              } `}
+            } `}
           >
             <SideBar data={dataSideBar} logout={this.logout} />
           </div>
           <div
             className={`${
               sideBarIsTrue ? "sideBarOut content" : "sideBarIn content"
-              } `}
+            } `}
           >
             <Button flat onClick={() => this.toggleSideBar(sideBarIsTrue)}>
               bt
@@ -87,6 +88,11 @@ export default class Container extends Component {
                 exact
                 path={`${routes.Container}${routes.Instructor}`}
                 component={Instructor}
+              />
+              <Route
+                exact
+                path={`${routes.Container}${routes.Tuto}`}
+                component={Tutorial}
               />
             </Switch>
           </div>
