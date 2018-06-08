@@ -28,8 +28,29 @@ export const agenda = {
     {
       createdAt: {
         day: 20,
-        month: "April"
-      }
+        month: "April",
+        time: "19:00"
+      },
+      title: "Event Title",
+      checked: true
+    },
+    {
+      createdAt: {
+        day: 20,
+        month: "April",
+        time: "19:00"
+      },
+      title: "Event Title",
+      checked: true
+    },
+    {
+      createdAt: {
+        day: 20,
+        month: "April",
+        time: "19:00"
+      },
+      title: "Event Title",
+      checked: false
     }
   ]
 }

@@ -8,7 +8,7 @@ import App from "components/app"
 import store from "store"
 import registerServiceWorker from "registerServiceWorker"
 
-import "index.css"
+import "index.scss"
 
 ReactDOM.render(
   <Provider store={store}>
