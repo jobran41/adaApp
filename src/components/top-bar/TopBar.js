@@ -1,15 +1,30 @@
 import React, { Component } from "react"
 import { Button, Avatar } from "react-md"
 import { cls } from "reactutils"
+import { connect } from 'react-redux'
 //import Logo from "images/logo.png"
-import * as cookies from "tiny-cookie"
+//import * as cookies from "tiny-cookie"
 import { withRouter } from "react-router-dom"
 import Navigation from "./Navigation"
+import { toggleTopbar } from "modules/app/actions"
 
 import "./styles.scss"
 
 @withRouter
-export default class TopBar extends Component {
+@connect(null, { toggleTopbar })
+
+class TopBar extends Component {
+  onToggleClick = (collapsed) => {
+    const { toggleTopbar } = this.props
+
+    if (collapsed) {
+      toggleTopbar(collapsed)
+    } else {
+      toggleTopbar(!collapsed)
+    }
+  };
+
+
   render() {
     // const me = this.props.query.data;
     const letter = "jobran".charAt(0).toUpperCase()
@@ -17,7 +32,7 @@ export default class TopBar extends Component {
 
     return (
       <div className="topBar">
-        <div className="topBar-logo">        
+        <div className="topBar-logo">
           <span>ada.</span>
         </div>
         <Navigation />
@@ -34,18 +49,17 @@ export default class TopBar extends Component {
               "mdi",
               collapsed ? "mdi-close" : "mdi-menu"
             )}
-            onClick={this.onToggleClick}
+            onClick={() => this.onToggleClick(true)}
           />
         </div>
       </div>
     )
   }
 
-  onToggleClick = () => {
-    const { collapsed, onCollapseChanged } = this.props
-    if (onCollapseChanged) onCollapseChanged(!collapsed)
-  };
 
+
+}
+/*
   signOut = () => {
     cookies.remove("access_token")
     cookies.remove("__Secure-access_token")
@@ -55,3 +69,5 @@ export default class TopBar extends Component {
     window.location.href = "/login"
   };
 }
+*/
+export default TopBar 

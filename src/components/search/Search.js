@@ -12,7 +12,6 @@ export default class Search extends Component {
     }
   }
   searchLessons = () => {
-    const { wordSearch } = this.state
     return lessons.map((ls, index) => <LessonItem key={index} {...ls} />)
   };
   render() {
