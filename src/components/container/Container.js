@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { Switch, Route, Redirect } from "react-router-dom"
-import { Button } from "react-md"
 import { withRouter } from "react-router"
 import { connect } from 'react-redux'
 
@@ -22,10 +21,7 @@ import "./Container.scss"
   sideBarIsTrue: app.topbarCollapsed
 }))
 export default class Container extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { sideBarIsTrue: true }
-  }
+
   toggleSideBar = isTrue => {
     this.setState({ sideBarIsTrue: !isTrue })
   };
@@ -34,7 +30,7 @@ export default class Container extends Component {
     history.push("/")
   };
   render() {
-    const { sideBarIsTrue } = this.state
+    const { sideBarIsTrue } = this.props
     return (
       <div className="App-container">
         <TopBar />
@@ -51,9 +47,6 @@ export default class Container extends Component {
               sideBarIsTrue ? "sideBarOut content" : "sideBarIn content"
               } `}
           >
-            <Button flat onClick={() => this.toggleSideBar(sideBarIsTrue)}>
-              bt
-            </Button>
             <Switch>
               <Route
                 exact
