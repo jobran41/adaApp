@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import { LinearProgress } from "react-md"
 
+import "./skill-item.scss"
+
 export default class SkillItem extends Component {
   render() {
     const { name, progress } = this.props
