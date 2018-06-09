@@ -23,7 +23,7 @@ export default class FirstTab extends Component {
   render() {
     const { view } = this.state
     return (
-      <div className="first-tab">
+      <div className="first-tab md-grid">
         <div className="top-position md-grid">
           <div className="img-left md-cell md-cell--4 md-cell--12-tablet" >
             <img alt="" src={ img1 } />
