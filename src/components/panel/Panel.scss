@@ -44,8 +44,15 @@
   .md-btn--icon {
     padding: 0;
   }
+  .PanelBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+  }
   .panelbutton {
-    float: right;
+    flex-grow: 0;
+    align-self: flex-end;
     margin: 8px 0;
     border: 1px solid #2a7bdb;
     &.md-text {
