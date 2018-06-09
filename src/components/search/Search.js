@@ -22,12 +22,12 @@ export default class Search extends Component {
     return (
       <div className="md-cell md-cell--10 search">
         <TextField
-          id="phone-number-with-icon-right"
-          label="Search"
+          placeholder="Search"
           rightIcon={<FontIcon>search</FontIcon>}
-          size={10}
-          fullWidth
+          block
+          type="search"
           value={wordSearch}
+          className="search-field"
           onChange={v => this.setState({ wordSearch: v })}
         />
         <div className="lessons-grid md-grid">{this.searchLessons()}</div>

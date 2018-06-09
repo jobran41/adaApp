@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Button } from "react-md"
-import img from "images/image2.jpg"
+import img from "images/image4.jpg"
 
 import "./lesson-item.scss"
 
@@ -13,7 +13,7 @@ export default class LessonItem extends Component {
         <div className="info-details">
           <div className="info-details-title">{title}</div>
           <div className="info-details-description">{description}</div>
-          <Button icon iconClassName="mdi mdi-telegram"  className="card-button"/>
+          <Button icon iconClassName="mdi mdi-plus-circle"  className="plus-button"/>
         </div>
       </div>
     )

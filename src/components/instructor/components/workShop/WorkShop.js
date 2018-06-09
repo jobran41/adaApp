@@ -43,7 +43,6 @@ export default class Aquarium extends Component {
         return (
             <Panel
                 title="Aquarium"
-                widthProps="800"
             >
                 {this.renderList()}
                 <Button onClick={this.addMore} raised>Browes More</Button>

@@ -1,8 +1,14 @@
 .Instructor {
   display: flex;
+  &.md-cell {
+    margin: 8px auto;
+  }
+  .CalenderProfile {
+    margin-bottom: 16px;
+  }
   .Instructor-CalendarComponent {
-    width: 80%;
     border: none;
+    width: 100%;
     .rc-calendar-input-wrap {
       display: none;
     }
@@ -16,7 +22,6 @@
         }
       }
       .rc-calendar-body {
-        width: 80%;
         margin: 0 auto;
       }
       .rc-calendar-footer {

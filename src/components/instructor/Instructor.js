@@ -13,13 +13,15 @@ import "./Instructor.scss"
 export default class Instructor extends Component {
     render() {
         return (
-            <div className="Instructor">
+            <div className="md-cell md-cell--10 Instructor md-grid">
                 <StudentsList data={dataSideBar} />
-                <div className="rightContent">
+                <div className="rightContent md-cell md-cell--6">
+                <div className="papers__panel CalenderProfile">
                     <Calendar
                         className="Instructor-CalendarComponent"
                         onSelect={this.onStandaloneSelect}
                     />
+                </div>
                     <WorkShopList data={dataWorkShop} />
                 </div>
             </div>
