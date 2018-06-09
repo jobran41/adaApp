@@ -11,24 +11,20 @@ import { toggleTopbar } from "modules/app/actions"
 import "./styles.scss"
 
 @withRouter
-@connect(null, { toggleTopbar })
-
+@connect(({ app }) => ({
+  sideBarIsTrue: app.topbarCollapsed
+}), { toggleTopbar })
 class TopBar extends Component {
   onToggleClick = (collapsed) => {
     const { toggleTopbar } = this.props
-
-    if (collapsed) {
-      toggleTopbar(collapsed)
-    } else {
-      toggleTopbar(!collapsed)
-    }
+    toggleTopbar(collapsed)
   };
 
 
   render() {
     // const me = this.props.query.data;
     const letter = "jobran".charAt(0).toUpperCase()
-    const { collapsed } = this.props
+    const { sideBarIsTrue } = this.props
 
     return (
       <div className="topBar">
@@ -47,9 +43,9 @@ class TopBar extends Component {
             iconClassName={cls(
               "topBar-collapseicon",
               "mdi",
-              collapsed ? "mdi-close" : "mdi-menu"
+              sideBarIsTrue ? "mdi-close" : "mdi-menu"
             )}
-            onClick={() => this.onToggleClick(true)}
+            onClick={() => this.onToggleClick(sideBarIsTrue)}
           />
         </div>
       </div>

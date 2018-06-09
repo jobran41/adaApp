@@ -6,7 +6,7 @@ import {
 } from "modules/app/actions"
 
 const initialState = {
-  topbarCollapsed: false,
+  topbarCollapsed: true,
 }
 
 update.extend("$auto", (value, object) => {
@@ -21,7 +21,7 @@ export default handleActions(
           $set:
             payload.collapsed === undefined
               ? !state.topbarCollapsed
-              : payload.collapsed,
+              : payload.topbarCollapsed,
         },
       })
     },

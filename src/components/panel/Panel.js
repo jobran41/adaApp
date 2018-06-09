@@ -20,7 +20,7 @@ export default class Panel extends Component {
                         <h5> {subTitle} </h5>
                     </div>
                     {iconButton && <div className="PanelHeader-icon">
-                        <Button icon iconBefore={false} iconClassName={`mdi ${iconButton}`} />
+                        <Button icon iconBefore={false} >{iconButton}</Button>
                     </div>}
 
                 </div>
