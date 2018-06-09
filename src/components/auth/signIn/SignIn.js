@@ -14,22 +14,25 @@ class SignIn extends Component {
         zDepth={1}
         className="SignIn"
       >
+        <h3>Login</h3>
         <TextField
-          label="Email"
+          placeholder="Email"
           id="email"
-          type="text"
+          type="email"
+          block
           onChange={v => this.setState({ email: v })}
         />
         <TextField
-          label="Passwoprd"
+          placeholder="Passwoprd"
           type="password"
           id="Passwoprd"
+          block
           onChange={v => this.setState({ password: v })}
         />
         <div className="info">
-          <Button flat >Login</Button>
-          <p>forgot you password ?</p>
-          <p>dont have an Account ? SignUp</p>
+          <Button flat className="form-button">Login</Button>
+          <p>forgot you <b>password ?</b></p>
+          <p>dont have an Account ? <b>SignUp</b></p>
         </div>
       </Paper >
     )
