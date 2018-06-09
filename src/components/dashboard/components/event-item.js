@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { Checkbox } from "react-md"
 export default class EventItem extends Component {
   render() {
-    const { createdAt, title, time, index, checked } = this.props
+    const { createdAt, title, index, checked } = this.props
     return (
       <div className="event-item">
         <div className="event-item-date">

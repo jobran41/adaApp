@@ -41,11 +41,11 @@ export default class LiveSession extends Component {
             <Panel
                 title="Upcoming live Session"
                 subTitle="See All live session"
-                widthProps="500"
+                className="md-cell md-cell--6"
                 iconButton="mdi-fullscreen"
             >
                 {this.renderList()}
-                <Button raised>See More</Button>
+                <Button flat className="panelbutton">See More</Button>
             </Panel >
         )
     }

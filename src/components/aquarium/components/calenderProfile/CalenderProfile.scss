@@ -4,3 +4,63 @@
   align-items: center;
   margin-top: 15px;
 }
+
+.CalenderProfile {
+  .rc-calendar {
+    background: none;
+    box-shadow: none;
+    .rc-calendar-header {
+      border: none;
+      color: #fff;
+    }
+    .rc-calendar-month-select,
+    .rc-calendar-year-select,
+    .rc-calendar-prev-month-btn,
+    .rc-calendar-next-month-btn,
+    .rc-calendar-prev-year-btn,
+    .rc-calendar-next-year-btn .rc-calendar-column-header,
+    .rc-calendar-date {
+      color: #fff;
+      &:hover {
+        background: none;
+      }
+    }
+    .rc-calendar-next-month-btn-day,
+    .rc-calendar-last-month-cell {
+      .rc-calendar-date {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+    .rc-calendar-active-week {
+      background-image: linear-gradient(-45deg, #2662d7 0, #358fe5 100%);
+    }
+    .rc-calendar-selected-day {
+      .rc-calendar-date {
+        background: none;
+      }
+    }
+
+    .rc-calendar-month-panel {
+      background-image: linear-gradient(-45deg, #2662d7 0, #358fe5 100%);
+      .rc-calendar-month-panel-cell {
+        .rc-calendar-month-panel-month {
+          color: #fff;
+          &:hover {
+            background: rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+    }
+    .rc-calendar-year-panel {
+      background-image: linear-gradient(-45deg, #2662d7 0, #358fe5 100%);
+      .rc-calendar-year-panel-cell {
+        .rc-calendar-year-panel-year {
+          color: #fff;
+          &:hover {
+            background: rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+    }
+  }
+}
