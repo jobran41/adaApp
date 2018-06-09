@@ -1,40 +1,72 @@
 import React, { Component } from "react"
-import { TextField, Button, Paper } from "react-md"
+import { TextField, Button, Paper, Snackbar } from "react-md"
+import { withRouter } from "react-router-dom"
+import * as cookies from "tiny-cookie"
 
-import './SignIn.scss'
+import * as routes from "libs/constants/routes"
 
+import "./SignIn.scss"
+
+@withRouter
 class SignIn extends Component {
   constructor(props) {
     super(props)
-    this.state = { email: "", password: "" }
+    this.state = { email: "", password: "", toasts: [], autohide: true }
   }
+  signIn = () => {
+    const { email, password } = this.state
+    const { history } = this.props
+    if (email === "admin" && password === "admin") {
+      cookies.set("login", email)
+      history.push(`${routes.Container}${routes.Dashboard}`)
+    } else {
+      this.addToast("Login error")
+    }
+  };
+  addToast = (text, action, autohide = true) => {
+    this.setState(state => {
+      const toasts = state.toasts.slice()
+      toasts.push({ text, action })
+      return { toasts, autohide }
+    })
+  };
+  dismissToast = () => {
+    const [, ...toasts] = this.state.toasts
+    this.setState({ toasts })
+  };
   render() {
+    const { email, password, toasts, autohide } = this.state
     return (
-      < Paper
-        zDepth={1}
-        className="SignIn"
-      >
+      <Paper zDepth={1} className="SignIn">
         <TextField
           label="Email"
           id="email"
           type="text"
           onChange={v => this.setState({ email: v })}
+          value={email}
         />
         <TextField
           label="Passwoprd"
           type="password"
           id="Passwoprd"
           onChange={v => this.setState({ password: v })}
+          value={password}
         />
         <div className="info">
-          <Button flat >Login</Button>
+          <Button flat onClick={this.signIn}>
+            Login
+          </Button>
           <p>forgot you password ?</p>
           <p>dont have an Account ? SignUp</p>
         </div>
-      </Paper >
+        <Snackbar
+          id="example-snackbar"
+          toasts={toasts}
+          autohide={autohide}
+          onDismiss={this.dismissToast}
+        />
+      </Paper>
     )
   }
 }
 export default SignIn
-
-

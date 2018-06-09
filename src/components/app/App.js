@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import GeneralErrorBoundary from "components/general-error-boundary"
 import { withRouter } from "react-router"
 import { Switch, Route, Redirect } from "react-router-dom"
+import * as cookies from "tiny-cookie"
 
 import * as routes from "libs/constants/routes"
 
@@ -14,6 +15,7 @@ import "./App.scss"
 @withRouter
 class App extends Component {
   render() {
+    const login = cookies.get("login")
     return (
       <GeneralErrorBoundary>
         <div className="App">
@@ -21,11 +23,26 @@ class App extends Component {
             <Route
               exact
               path="/"
-              render={() => <Redirect to={routes.SIGN_IN} />}
+              render={() => {
+                if (login) {
+                  return <Redirect to={routes.Container} />
+                } else {
+                  return <Redirect to={routes.SIGN_IN} />
+                }
+              }}
             />
             <Route exact path={routes.SIGN_IN} component={SignIn} />
             <Route exact path={routes.SIGN_UP} component={SignUp} />
-            <Route path={routes.Container} component={Container} />
+            <Route
+              path={routes.Container}
+              render={() => {
+                if (login) {
+                  return <Container />
+                } else {
+                  return <Redirect to={routes.SIGN_IN} />
+                }
+              }}
+            />
           </Switch>
         </div>
       </GeneralErrorBoundary>
