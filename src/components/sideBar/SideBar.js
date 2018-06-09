@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { LinearProgress, Avatar, Button } from "react-md"
 
-import Logo from "images/logo.png"
 
 import "./SideBar.scss"
 
@@ -56,7 +55,7 @@ class SideBar extends Component {
   render() {
     const {
       profileName,
-      skillsName,
+      adress,
       tel,
       Email,
       grade,
@@ -67,41 +66,43 @@ class SideBar extends Component {
         <div className="SideBar-header">
           <div className="SideBar-header-info">
             <div className="SideBar-header-avatar">
-              <Avatar className="SideBar-avatar" src={Logo} />
+              <Avatar className="SideBar-avatar" src="http://i.pravatar.cc/150?img=11" />
             </div>
             <div className="SideBar-header-description">
               <h5>{profileName}</h5>
-              <span>{skillsName}</span>
+              <span>{adress}</span>
               <p className="tel">{tel}</p>
               <p className="Email">{Email}</p>
             </div>
           </div>
           {!this.isEmptyObject(this.props.data.ProgressBar) && typeof this.props.data.ProgressBar === 'object' &&
-            <div>
+            <div className="skillProgress">
               <LinearProgress
-                id="progress-style-example"
                 value={level || 0}
-                query
-                className="horizontale-progress"
                 // style={{ height: 100, width: 20 }}
                 //progressClassName="horizontale-progress"
-                progressStyle={value => ({ top: `${100 - value}%`, width: "100%" })}
+                //progressStyle={value => ({ top: `${100 - value}%`, width: "100%" })}
               />
               <div className="LinearProgress-details">
-                <span>{indicatorMin}</span>
-                <span>{indicatorMax}</span>
+                <span>{indicatorMin} % Skills</span>
+                <span>{indicatorMax} %</span>
               </div>
             </div>
           }
         </div>
         <div className="SideBar-body">
-          <ul className="socialLink">{this.renderSocial()}</ul>
-          <div className="budges">
+          <ul className="SideBar-block socialLink">{this.renderSocial()}</ul>
+          <hr/>
+          <div className="SideBar-block budges">
             <div className="budges-header">Badges</div>
-            {this.renderBadge()}
+            <div className="budges-container">{this.renderBadge()}</div>
           </div>
-          <div className="grade">Grade</div>
+          <hr/>
+          <div className="SideBar-block grade">
+          <h5>Grade</h5>
           <p>{grade}</p>
+          </div>
+          <hr/>
         </div>
         <div className="SideBar-footer">
           <Button flat iconBefore={false} iconClassName="mdi mdi-pencil">

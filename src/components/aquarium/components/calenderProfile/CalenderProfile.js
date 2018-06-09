@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Avatar, Paper } from 'react-md'
 import Calendar from "rc-calendar"
 
-import Logo from "images/logo.png"
+//import Logo from "images/logo.png"
 
 import "rc-calendar/assets/index.css"
 import './CalenderProfile.scss'
@@ -24,19 +24,15 @@ export default class Instructor extends Component {
         return (
             <Paper
                 zDepth={1}
-                className={`papers__panel ${className}`}
+                className={`papers__panel CalenderProfile md-cell md-cell--6 ${className}`}
             >
-                <div className="PanelHeader">
-                    <div className="SideBar-header-info">
-                        <div className="SideBar-header-avatar">
-                            <Avatar className="SideBar-avatar" src={Logo} />
-                        </div>
-                        <div className="SideBar-header-description">
-                            <h5>{profileName}</h5>
-                            <span>{skillsName}</span>
-                            <p className="tel">{tel}</p>
-                            <p className="Email">{Email}</p>
-                        </div>
+                <div className="CalenderProfileHeader">
+                        <Avatar className="CalenderProfileHeader-avatar" src="http://i.pravatar.cc/150?img=51" />
+                    <div className="CalenderProfileHeader-header-description">
+                        <h5>{profileName}</h5>
+                        <span>{skillsName}</span>
+                        <p className="tel">{tel}</p>
+                        <p className="Email">{Email}</p>
                     </div>
                 </div>
                 <div className="PanelBody">

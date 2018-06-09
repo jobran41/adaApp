@@ -1,0 +1,90 @@
+@import "../../Themes/first";
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  &.md-cell {
+    margin: 8px auto;
+  }
+  .project {
+    .project-tabs {
+      &.md-tabs {
+        padding: 0;
+      }
+      li {
+        max-width: fit-content;
+        min-width: auto;
+        padding: 10px;
+        border-radius: 2px 2px 0 0;
+        color: $grey;
+        height: auto;
+        background: #e1e3e4;
+        box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
+        .md-tab-label {
+          font-size: 15px;
+        }
+        &.md-tab--active {
+          color: $blue;
+          background: white;
+          .md-tab-label {
+            font-weight: bold;
+          }
+        }
+      }
+      .md-tab-indicator {
+        display: none;
+      }
+    }
+    .tutorial-panel {
+      background: white;
+      padding: 20px;
+      .sample {
+        background: $backgroundLightGrey;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      .notes {
+        border-top: 1px solid $backgroundLightGrey;
+        margin-top: 15px;
+        padding-top: 15px;
+      }
+    }
+  }
+  .code {
+    background: white;
+    margin-top: 15px;
+    padding: 15px;
+    h4 {
+      color: $blue;
+    }
+    .codeWApper {
+      background: $darker;
+      color: #fff;
+      padding: 15px;
+    }
+  }
+  .ressources {
+    background: white;
+    margin-top: 15px;
+    padding: 15px;
+    h4 {
+      color: $blue;
+    }
+    .md-text-field-container--multiline {
+      background: $backgroundLightGrey;
+      .md-text-field {
+        padding: 0 15px;
+      }
+    }
+  }
+
+  .tuto-gb {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    .tutorial-button {
+      border: 1px solid $blue;
+      color: $blue;
+      margin-left: 5px;
+    }
+  }
+}
