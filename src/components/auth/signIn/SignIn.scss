@@ -1,0 +1,32 @@
+.SignIn {
+  width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  position: absolute;
+  left: calc(50% - 200px);
+  top: calc(50% - 200px);
+  border-top: 2px solid #f5c228;
+  padding: 20px;
+  color: #485a6d;
+  .md-text-field-container--input-block {
+    background: #fbfbfb;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    .md-text-field-inline-indicator {
+      top: 8px;
+      right: 8px;
+    }
+  }
+  .info {
+    text-align: right;
+    .form-button {
+      background: #2a7bdb;
+      color: #fff;
+      margin: 10px 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}

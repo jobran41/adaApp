@@ -13,5 +13,4 @@ export const Lab = "/lab"
 export const Search = "/search"
 export const Counter = "/counter"
 export const Container = "/ada"
-
-
+export const Tuto = "/tuto"

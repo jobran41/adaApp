@@ -1,0 +1,35 @@
+.card-item {
+  position: relative;
+  .title {
+    font-size: 17px;
+    color: #2a7bdb;
+    font-weight: bold;
+  }
+  .hashtag {
+    color: #6f7379;
+  }
+
+  .md-progress--linear {
+    background: #c6cacf;
+    .md-progress--linear-active {
+      background: #2a7bdb;
+    }
+  }
+  .common-details {
+    color: #2a7bdb;
+    margin: 5px 0;
+  }
+  .card-button {
+    position: absolute;
+    border-radius: 0;
+    background: #2a7bdb;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    .md-icon {
+      color: white;
+    }
+  }
+}

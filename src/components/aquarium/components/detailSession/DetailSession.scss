@@ -1,2 +1,70 @@
 .LiveSession {
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  .LiveSession-sommaire {
+    flex-grow: 1;
+    background: #202325;
+    width: 40%;
+    color: #fff;
+    .sommaire-Image-wapper {
+      width: 100%;
+      height: 120px;
+      overflow: hidden;
+      .sommaire-Image {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .LiveSession-content {
+    width: 60%;
+    padding: 20px;
+    .titleDetail {
+      h4 {
+        margin: 0;
+        color: #2a7bdb;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      color: #aaaeb3;
+      margin-bottom: 20px;
+    }
+    .coloboratorDetail {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > span {
+        color: #2a7bdb;
+        b {
+          font-weight: bold;
+        }
+      }
+      .liveAvatar {
+        .md-avatar {
+          margin-left: 5px;
+        }
+      }
+    }
+    .rightDescription {
+      display: flex;
+      align-items: baseline;
+      margin: 10px 0;
+
+      .password-button {
+        border: 2px solid #2a7bdb;
+        margin-left: 5px;
+        color: #2a7bdb;
+      }
+    }
+    .LiveSession-rightContent {
+      color: #6f7379;
+    }
+    .LiveSession-note {
+      color: #149fed;
+      border-top: 1px solid #eee;
+      margin-top: 20px;
+      padding-top: 10px;
+    }
+  }
 }

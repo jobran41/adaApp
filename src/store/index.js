@@ -8,6 +8,7 @@ import { routerMiddleware } from "react-router-redux"
 
 //import mutation from "modules/mutate/reducers"
 import userReducer from "modules/auth/user"
+import app from "modules/app/reducers"
 
 const history = createHistory()
 let middleware = [
@@ -22,7 +23,8 @@ const rootReducer = combineReducers({
   //query,
   // mutation,
   // sessionState: sessionReducer,
-  userState: userReducer
+  userState: userReducer,
+  app
 })
 
 const store = createStore(

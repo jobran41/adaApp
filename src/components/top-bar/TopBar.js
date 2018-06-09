@@ -1,28 +1,39 @@
 import React, { Component } from "react"
 import { Button, Avatar } from "react-md"
 import { cls } from "reactutils"
-import Logo from "images/logo.png"
-import * as cookies from "tiny-cookie"
+import { connect } from 'react-redux'
+//import Logo from "images/logo.png"
+//import * as cookies from "tiny-cookie"
 import { withRouter } from "react-router-dom"
 import Navigation from "./Navigation"
+import { toggleTopbar } from "modules/app/actions"
 
 import "./styles.scss"
 
 @withRouter
-export default class TopBar extends Component {
+@connect(({ app }) => ({
+  sideBarIsTrue: app.topbarCollapsed
+}), { toggleTopbar })
+class TopBar extends Component {
+  onToggleClick = (collapsed) => {
+    const { toggleTopbar } = this.props
+    toggleTopbar(collapsed)
+  };
+
+
   render() {
     // const me = this.props.query.data;
     const letter = "jobran".charAt(0).toUpperCase()
-    const { collapsed } = this.props
+    const { sideBarIsTrue } = this.props
 
     return (
       <div className="topBar">
         <div className="topBar-logo">
-          <Avatar className="topBar-logo-avatar" src={Logo} />
+          <span>ada.</span>
         </div>
         <Navigation />
         <div className="topBar-info">
-          <Avatar className="title-bar-item-right-space-half" suffix="blue">
+          <Avatar className="title-bar-item-right-space-half" suffix="light-blue">
             {letter}
           </Avatar>
           <div className="nameStudent">Jobran amairi</div>
@@ -32,20 +43,19 @@ export default class TopBar extends Component {
             iconClassName={cls(
               "topBar-collapseicon",
               "mdi",
-              collapsed ? "mdi-close" : "mdi-menu"
+              sideBarIsTrue ? "mdi-close" : "mdi-menu"
             )}
-            onClick={this.onToggleClick}
+            onClick={() => this.onToggleClick(sideBarIsTrue)}
           />
         </div>
       </div>
     )
   }
 
-  onToggleClick = () => {
-    const { collapsed, onCollapseChanged } = this.props
-    if (onCollapseChanged) onCollapseChanged(!collapsed)
-  };
 
+
+}
+/*
   signOut = () => {
     cookies.remove("access_token")
     cookies.remove("__Secure-access_token")
@@ -55,3 +65,5 @@ export default class TopBar extends Component {
     window.location.href = "/login"
   };
 }
+*/
+export default TopBar 

@@ -1,6 +1,9 @@
 .WorkShopList {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-top: 15px;
+  .md-avatar {
+    margin: 0 5px;
+  }
 }

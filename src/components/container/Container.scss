@@ -1,23 +1,31 @@
 .App-container {
-    .container {
-        display: flex;
-        .sideBar {
-            width: 20%;
-            &.sideBarOut {
-                display: block;
-            }
-            &.sideBarIn {
-                display: none;
-            }
-        }
-        .content {
-            width: 80%;
-            &.sideBarOut {
-                width: 80%;
-            }
-            &.sideBarIn {
-                width: 100%;
-            }
-        }
+  .container {
+    display: flex;
+    .sideBar {
+      width: 20%;
+      overflow: hidden;
+      transition: all ease-in-out 400ms;
+      position: absolute;
+      height: calc(100% - 55px);
+      &.sideBarOut {
+        transform: translateX(0);
+      }
+      &.sideBarIn {
+        transform: translateX(-100%);
+        width: 0%;
+      }
     }
+    .content {
+      width: 80%;
+      transition: all ease-in-out 400ms;
+      &.sideBarOut {
+        width: 80%;
+        transform: translateX(20%);
+      }
+      &.sideBarIn {
+        width: 100%;
+        transform: translateX(0);
+      }
+    }
+  }
 }

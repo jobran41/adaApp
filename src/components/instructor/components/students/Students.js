@@ -44,11 +44,11 @@ export default class Students extends Component {
             <Panel
                 title="Mes Students List"
                 subTitle="See All Student"
-                widthProps="500"
+                className="md-cell md-cell--6"
                 iconButton="mdi-fullscreen"
             >
                 {this.renderList()}
-                <Button onClick={this.addMore} raised>Browes More</Button>
+                <Button flat onClick={this.addMore} className="panelbutton">Browes More</Button>
             </Panel >
         )
     }

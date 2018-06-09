@@ -1,6 +1,35 @@
+@import "../../Themes/first";
+
 .Aquarium {
+  &.md-cell {
+    margin: 8px auto;
+  }
+  .Aquarium-tabs {
+    &.md-tabs {
+      padding: 0 23px;
+      margin-bottom: 20px;
+    }
+    li {
+      max-width: fit-content;
+      min-width: auto;
+      padding: 0 7px 7px;
+      color: $grey;
+      .md-tab-label {
+        font-size: 15px;
+      }
+      &.md-tab--active {
+        color: $blue;
+        .md-tab-label {
+          font-weight: bold;
+        }
+      }
+    }
+    .md-tab-indicator {
+      background: $blue;
+    }
+  }
   .Aquarium-tabsInsctroctor {
-    display: flex;
+    flex-grow: 1;
     .Instructor-CalendarComponent {
       width: 100%;
       border: none;
@@ -15,10 +44,6 @@
           .rc-calendar-next-year-btn {
             display: none;
           }
-        }
-        .rc-calendar-body {
-          width: 80%;
-          margin: 0 auto;
         }
         .rc-calendar-footer {
           display: none;
@@ -41,7 +66,6 @@
     }
   }
   .Aquarium-tabsLiveSession {
-    display: flex;
-    justify-content: center;
+    flex-grow: 1;
   }
 }

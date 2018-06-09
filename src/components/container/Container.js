@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Switch, Route, Redirect } from "react-router-dom"
-import { Button } from "react-md"
 import { withRouter } from "react-router"
+import { connect } from 'react-redux'
 
 import * as routes from "libs/constants/routes"
 import TopBar from "../top-bar"
@@ -12,15 +12,16 @@ import Search from "../search"
 import SideBar from "../sideBar"
 import Instructor from "../instructor"
 import { dataSideBar } from "../sideBar/helpers"
+import Tutorial from "../tutorial"
 
 import "./Container.scss"
 
 @withRouter
+@connect(({ app }) => ({
+  sideBarIsTrue: app.topbarCollapsed
+}))
 export default class Container extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { sideBarIsTrue: true }
-  }
+
   toggleSideBar = isTrue => {
     this.setState({ sideBarIsTrue: !isTrue })
   };
@@ -29,7 +30,7 @@ export default class Container extends Component {
     history.push("/")
   };
   render() {
-    const { sideBarIsTrue } = this.state
+    const { sideBarIsTrue } = this.props
     return (
       <div className="App-container">
         <TopBar />
@@ -46,9 +47,6 @@ export default class Container extends Component {
               sideBarIsTrue ? "sideBarOut content" : "sideBarIn content"
               } `}
           >
-            <Button flat onClick={() => this.toggleSideBar(sideBarIsTrue)}>
-              bt
-            </Button>
             <Switch>
               <Route
                 exact
@@ -87,6 +85,11 @@ export default class Container extends Component {
                 exact
                 path={`${routes.Container}${routes.Instructor}`}
                 component={Instructor}
+              />
+              <Route
+                exact
+                path={`${routes.Container}${routes.Tuto}`}
+                component={Tutorial}
               />
             </Switch>
           </div>

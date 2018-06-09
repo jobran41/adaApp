@@ -1,0 +1,23 @@
+@import "../../Themes/first";
+
+.search {
+  &.md-cell {
+    margin: 8px auto;
+  }
+  .search-field {
+    width: 70%;
+    min-width: 320px;
+    margin: auto;
+    background: #fff;
+    padding: 10px 0 10px 10px;
+    .md-icon {
+      background: $blue;
+      color: white;
+      margin-top: -10px;
+      height: 36px;
+      margin-bottom: -10px;
+      width: 36px;
+      line-height: 36px;
+    }
+  }
+}

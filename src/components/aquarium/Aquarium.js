@@ -16,17 +16,17 @@ import "./Aquarium.scss"
 export default class Aquarium extends Component {
   render() {
     return (
-      <div className="Aquarium">
-        <TabsContainer panelClassName="md-grid" colored>
-          <Tabs tabId="simple-tab" >
+      <div className="md-cell md-cell--10 Aquarium">
+        <TabsContainer panelClassName="md-grid">
+          <Tabs tabId="simple-tab" className="Aquarium-tabs">
             <Tab label="Insctroctor">
-              <div className="Aquarium-tabsInsctroctor">
+              <div className="Aquarium-tabsInsctroctor md-grid">
                 <InstructorList data={dataInstructor} />
-                <CalenderProfile data={dataProfile} />
+                <CalenderProfile data={dataProfile} className="CalenderProfile" />
               </div>
             </Tab>
             <Tab label="Live Coding">
-              <div className="Aquarium-tabsLiveSession">
+              <div className="Aquarium-tabsLiveSession  md-grid">
                 <LiveSession data={dataLiveSession} />
                 <DetailSession />
               </div>

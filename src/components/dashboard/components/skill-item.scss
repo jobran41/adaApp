@@ -1,0 +1,12 @@
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .skill-item-progress {
+    margin-left: 15px;
+  }
+  .md-progress {
+    margin-left: 15px;
+    background: #eee;
+  }
+}
