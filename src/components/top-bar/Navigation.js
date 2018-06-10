@@ -16,7 +16,7 @@ class Navigation extends Component {
     history.push(url)
   };
   NavigationAuth = () => (
-    <div className="menu-withLogin md-cell md-cell--8 md-cell--2-offset">
+    <div className="menu-withLogin">
       <Button
         onClick={() => this.pushurl(`${routes.Container}${routes.Dashboard}`)}
         flat
