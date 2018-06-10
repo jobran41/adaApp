@@ -13,6 +13,7 @@ import SideBar from "../sideBar"
 import Instructor from "../instructor"
 import { dataSideBar } from "../sideBar/helpers"
 import Tutorial from "../tutorial"
+//import Draw from "../draw"
 
 import "./Container.scss"
 

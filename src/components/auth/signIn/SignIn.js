@@ -34,6 +34,7 @@ class SignIn extends Component {
     const [, ...toasts] = this.state.toasts
     this.setState({ toasts })
   };
+
   render() {
     const { email, password, toasts, autohide } = this.state
     const { history } = this.props
@@ -62,7 +63,7 @@ class SignIn extends Component {
         <div className="info">
           <Button flat className="form-button" onClick={this.signIn}>Login</Button>
           <p>forgot you <b><span className="FormLink" onClick={() => history.push(routes.FORGET)}>password ?</span></b></p>
-          <p>dont have an Account ? <b>SignUp</b></p>
+          <p>dont have an Account ? <b onClick={() => history.push(routes.SIGN_UP)}>SignUp</b></p>
         </div>
         <Snackbar
           id="example-snackbar"

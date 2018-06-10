@@ -1,8 +1,12 @@
 import React, { Component } from "react"
 import { TextField, Button, Paper } from "react-md"
+import { withRouter } from "react-router"
+
+import * as routes from "libs/constants/routes"
 
 import '../Style.scss'
 
+@withRouter
 class SignUp extends Component {
   constructor(props) {
     super(props)
@@ -15,12 +19,13 @@ class SignUp extends Component {
   }
 
   render() {
+    const { history } = this.props
     return (
       < Paper
         zDepth={1}
         className="authForm SignUp"
       >
-      <h3>SignUp</h3>
+        <h3>SignUp</h3>
         <TextField
           placeholder="First Name"
           id="firstName"
@@ -48,7 +53,7 @@ class SignUp extends Component {
         />
         <div className="info">
           <Button flat className="form-button">SignUp</Button>
-          <p>already have ab acount</p>
+          <p>already have ab acount <b onClick={() => history.push(routes.SIGN_IN)}>SignIn</b></p>
         </div>
       </Paper >
     )

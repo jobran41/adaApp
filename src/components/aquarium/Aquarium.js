@@ -10,8 +10,6 @@ import DetailSession from './components/detailSession'
 import { dataInstructor } from './components/instructor/helpers'
 import { dataLiveSession } from './components/liveSession/helpers'
 
-
-
 import "./Aquarium.scss"
 
 export default class Aquarium extends Component {
