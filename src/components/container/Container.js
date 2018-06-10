@@ -41,10 +41,10 @@ export default class Container extends Component {
 
   renderTopBar = () => {
     const { windowWidth } = this.props
-    if (windowWidth >= 700) {
-      return <TopBar />
+    if (windowWidth !== 0 && windowWidth <= 700) {
+      return <Draw windowWidth={windowWidth} />
     } else {
-      return <Draw />
+      return <TopBar windowWidth={windowWidth} />
     }
   }
   render() {

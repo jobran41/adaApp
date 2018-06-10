@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Button, Avatar } from "react-md"
 import { cls } from "reactutils"
 import { connect } from 'react-redux'
+
 //import Logo from "images/logo.png"
 //import * as cookies from "tiny-cookie"
 import { withRouter } from "react-router-dom"
@@ -9,6 +10,7 @@ import Navigation from "./Navigation"
 import { toggleTopbar } from "modules/app/actions"
 
 import "./styles.scss"
+
 
 @withRouter
 @connect(({ app }) => ({
@@ -19,8 +21,6 @@ class TopBar extends Component {
     const { toggleTopbar } = this.props
     toggleTopbar(collapsed)
   };
-
-
   render() {
     // const me = this.props.query.data;
     const letter = "jobran".charAt(0).toUpperCase()

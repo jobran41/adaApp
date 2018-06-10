@@ -1,7 +1,9 @@
 
 import React, { PureComponent } from 'react'
 import { Button, Drawer, Toolbar } from 'react-md'
+import { connect } from 'react-redux'
 
+import { toggleTopbar } from "modules/app/actions"
 import NavItemLink from './NavItemLink'
 import * as routes from "libs/constants/routes"
 
@@ -31,7 +33,7 @@ const navItems = [{
     icon: 'dashboard'
 },
 ]
-
+@connect(null, { toggleTopbar })
 export default class SimpleDrawer extends PureComponent {
     state = { visible: false, position: 'left' };
     openDrawerRight = () => {
@@ -45,6 +47,12 @@ export default class SimpleDrawer extends PureComponent {
     handleVisibility = (visible) => {
         this.setState({ visible })
     };
+    componentDidMount() {
+        const { windowWidth, toggleTopbar } = this.props
+        if (windowWidth !== 0 && windowWidth <= 700) {
+            toggleTopbar(true)
+        }
+    }
     render() {
         const { visible, position } = this.state
         const isLeft = position === 'left'
