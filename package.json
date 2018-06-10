@@ -71,7 +71,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "lint": "eslint_d ./src --fix",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "heroku-prebuild": "yarn install --production=false"
   },
   "jest": {
     "collectCoverageFrom": [
