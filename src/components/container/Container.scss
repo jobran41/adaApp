@@ -5,7 +5,9 @@
       width: 20%;
       overflow: hidden;
       transition: all ease-in-out 400ms;
-      position: absolute;
+      position: fixed;
+      top: 55px;
+      bottom: 0;
       height: calc(100% - 55px);
       &.sideBarOut {
         transform: translateX(0);
@@ -19,12 +21,24 @@
       width: 80%;
       transition: all ease-in-out 400ms;
       &.sideBarOut {
-        width: 80%;
         transform: translateX(20%);
       }
       &.sideBarIn {
         width: 100%;
         transform: translateX(0);
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .container {
+      .sideBar {
+        width: 30%;
+      }
+      .content {
+        width: 70%;
+        &.sideBarOut {
+          transform: translateX(42%);
+        }
       }
     }
   }

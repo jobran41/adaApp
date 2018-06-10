@@ -1,4 +1,4 @@
-.SignUp {
+.authForm {
   width: 400px;
   margin: 0 auto;
   background: #fff;
@@ -28,5 +28,14 @@
     p {
       margin: 0;
     }
+    .FormLink {
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
   }
 }

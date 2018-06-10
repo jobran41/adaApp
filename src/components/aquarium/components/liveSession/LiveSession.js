@@ -46,7 +46,7 @@ export default class LiveSession extends Component {
                 title="Upcoming live Session"
                 subTitle="See All live session"
                 className="md-cell md-cell--12"
-                iconButton="mdi-fullscreen"
+                iconButton="more_horiz"
             >
                 {this.renderList()}
                 <Button flat className="panelbutton">See More</Button>

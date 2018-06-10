@@ -3,7 +3,7 @@ import { TextField, Button, Paper } from "react-md"
 
 import '../Style.scss'
 
-class SignUp extends Component {
+class Forgetpassword extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -18,21 +18,9 @@ class SignUp extends Component {
     return (
       < Paper
         zDepth={1}
-        className="authForm SignUp"
+        className="authForm forgetpassword"
       >
-      <h3>SignUp</h3>
-        <TextField
-          placeholder="First Name"
-          id="firstName"
-          block
-          onChange={v => this.setState({ firstName: v })}
-        />
-        <TextField
-          placeholder="Last Name"
-          id="lastName"
-          block
-          onChange={v => this.setState({ lastName: v })}
-        />
+      <h3>Forget password ?</h3>
         <TextField
           placeholder="Email"
           id="email"
@@ -47,14 +35,13 @@ class SignUp extends Component {
           onChange={v => this.setState({ password: v })}
         />
         <div className="info">
-          <Button flat className="form-button">SignUp</Button>
-          <p>already have ab acount</p>
+          <Button flat className="form-button">Submit</Button>
         </div>
       </Paper >
     )
   }
 }
 
-export default SignUp
+export default Forgetpassword
 
 

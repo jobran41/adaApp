@@ -8,7 +8,9 @@ import * as routes from "libs/constants/routes"
 
 import SignIn from "../auth/signIn"
 import SignUp from "../auth/signUp"
+import Forgetpassword from "../auth/forgetpassword"
 import Container from "../container"
+
 //import logo from "./logo.svg";
 import "./App.scss"
 
@@ -33,6 +35,7 @@ class App extends Component {
             />
             <Route exact path={routes.SIGN_IN} component={SignIn} />
             <Route exact path={routes.SIGN_UP} component={SignUp} />
+            <Route exact path={routes.FORGET} component={Forgetpassword} />
             <Route
               path={routes.Container}
               render={() => {

@@ -5,7 +5,7 @@ import * as cookies from "tiny-cookie"
 
 import * as routes from "libs/constants/routes"
 
-import "./SignIn.scss"
+import "../Style.scss"
 
 @withRouter
 class SignIn extends Component {
@@ -36,10 +36,11 @@ class SignIn extends Component {
   };
   render() {
     const { email, password, toasts, autohide } = this.state
+    const { history } = this.props
     return (
       < Paper
         zDepth={1}
-        className="SignIn"
+        className="authForm SignIn"
       >
         <h3>Login</h3>
         <TextField
@@ -60,7 +61,7 @@ class SignIn extends Component {
         />
         <div className="info">
           <Button flat className="form-button" onClick={this.signIn}>Login</Button>
-          <p>forgot you <b>password ?</b></p>
+          <p>forgot you <b><span className="FormLink" onClick={() => history.push(routes.FORGET)}>password ?</span></b></p>
           <p>dont have an Account ? <b>SignUp</b></p>
         </div>
         <Snackbar

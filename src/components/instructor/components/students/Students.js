@@ -15,7 +15,7 @@ export default class Students extends Component {
         if (Array.isArray(dataLocal)) {
             const d = dataLocal.map((item, i) => {
                 return (<div className="StudentsList" key={i}>
-                    <Avatar key={i} >
+                    <Avatar key={i} random>
                         {item.profileName.charAt(0).toUpperCase()}
                     </Avatar>
                     <div className="profileName">{item.profileName}</div>
@@ -45,7 +45,7 @@ export default class Students extends Component {
                 title="Mes Students List"
                 subTitle="See All Student"
                 className="md-cell md-cell--6"
-                iconButton="mdi-fullscreen"
+                iconButton="more_horiz"
             >
                 {this.renderList()}
                 <Button flat onClick={this.addMore} className="panelbutton">Browes More</Button>

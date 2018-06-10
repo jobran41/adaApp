@@ -45,7 +45,7 @@ export default class Aquarium extends Component {
                 title="Aquarium"
             >
                 {this.renderList()}
-                <Button onClick={this.addMore} raised>Browes More</Button>
+                <Button flat onClick={this.addMore} className="panelbutton">Browes More</Button>
             </Panel >
         )
     }
