@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Avatar, Paper } from 'react-md'
+import { Avatar, Paper, Button } from 'react-md'
 import Calendar from "rc-calendar"
 
 //import Logo from "images/logo.png"
@@ -22,18 +22,20 @@ export default class Instructor extends Component {
             className,
         } = this.props.data
         return (
+
             <Paper
                 zDepth={1}
-                className={`papers__panel CalenderProfile md-cell md-cell--6 ${className}`}
+                className={`papers__panel CalenderProfile md-cell md-cell--12 ${className}`}
             >
                 <div className="CalenderProfileHeader">
-                        <Avatar className="CalenderProfileHeader-avatar" src="http://i.pravatar.cc/150?img=51" />
+                    <Avatar className="CalenderProfileHeader-avatar" src="http://i.pravatar.cc/150?img=51" />
                     <div className="CalenderProfileHeader-header-description">
                         <h5>{profileName}</h5>
                         <span>{skillsName}</span>
                         <p className="tel">{tel}</p>
                         <p className="Email">{Email}</p>
                     </div>
+                    <Button className="CalenderProfileHeader-header-button" onClick={this.props.onBackCard} icon iconBefore={false} iconClassName={`mdi mdi-arrow-right-bold-circle-outline`} />
                 </div>
                 <div className="PanelBody">
                     <Calendar
@@ -41,7 +43,6 @@ export default class Instructor extends Component {
                         onSelect={this.onStandaloneSelect}
                     />
                 </div>
-
             </Paper>
         )
     }

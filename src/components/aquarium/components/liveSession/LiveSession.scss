@@ -1,0 +1,10 @@
+.WorkShopList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  &:hover {
+    background-color: #c6cacf;
+    cursor: pointer;
+  }
+}

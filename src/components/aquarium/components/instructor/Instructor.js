@@ -14,15 +14,18 @@ export default class Instructor extends Component {
         const { dataLocal } = this.state
         if (Array.isArray(dataLocal)) {
             const d = dataLocal.map((item, i) => {
-                return (<div className="InstructorList" key={i}>
-                    <Avatar random key={i} >
-                        {item.profileName.charAt(0).toUpperCase()}
-                    </Avatar>
-                    <div className="profileName">{item.profileName}</div>
-                    <div className="skillsName">{item.skillsName}</div>
-                    <div className="skillsCount">{item.skillsCount}</div>
-                    <div className="Button"> <Button icon iconBefore={false} iconClassName={`mdi mdi-eye`} /></div>
-                </div>)
+                return (
+                    <div className="InstructorList"
+                        onClick={() => this.props.selectInstructor(item)}
+                        key={i}>
+                        <Avatar random key={i} >
+                            {item.profileName.charAt(0).toUpperCase()}
+                        </Avatar>
+                        <div className="profileName">{item.profileName}</div>
+                        <div className="skillsName">{item.skillsName}</div>
+                        <div className="skillsCount">{item.skillsCount}</div>
+                        <div className="Button"> <Button icon iconBefore={false} iconClassName={`mdi mdi-eye`} /></div>
+                    </div>)
             })
             return d
         } else {
@@ -44,7 +47,7 @@ export default class Instructor extends Component {
             <Panel
                 title="Mes Instructor List"
                 subTitle="See All Instructor"
-                className="md-cell md-cell--6"
+                className="md-cell md-cell--12"
                 iconButton="more_horiz"
             >
                 {this.renderList()}

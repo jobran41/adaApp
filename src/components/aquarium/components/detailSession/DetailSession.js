@@ -10,11 +10,11 @@ export default class LiveSession extends Component {
         return (
             <Paper
                 zDepth={1}
-                className="LiveSession md-cell md-cell--6"
+                className="LiveSession md-cell md-cell--12"
             >
                 <div className="LiveSession-sommaire">
                     <div className="sommaire-Image-wapper">
-                    <img className="sommaire-Image" alt="" src={sommaireImage} />
+                        <img className="sommaire-Image" alt="" src={sommaireImage} />
                     </div>
                     <ol>
                         <li>build app</li>
@@ -27,8 +27,11 @@ export default class LiveSession extends Component {
                 </div>
                 <div className="LiveSession-content">
                     <div className="titleDetail">
-                        <h4>Lorem ipsume</h4>
-                        <span>#css,#html</span>
+                        <div className="">
+                            <h4>Lorem ipsume</h4>
+                            <span>#css,#html</span>
+                        </div>
+                        <Button className="CalenderProfileHeader-header-button" onClick={this.props.onBackCard} icon iconBefore={false} iconClassName={`mdi mdi-arrow-right-bold-circle-outline`} />
                     </div>
                     <div className="coloboratorDetail">
                         <span><b>12 april</b> 12:10</span>
