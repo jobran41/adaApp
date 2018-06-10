@@ -23,6 +23,7 @@ export default class Search extends Component {
       <div className="md-cell md-cell--10 search">
         <TextField
           placeholder="Search"
+          id="Search-TextField"
           rightIcon={<FontIcon>search</FontIcon>}
           block
           type="search"

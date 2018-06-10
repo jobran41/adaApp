@@ -14,13 +14,13 @@ export default class CardItem extends Component {
       <div className="card-item">
         <div className="title">{title}</div>
         <div className="hashtag">{this.renderHashtag()}</div>
-        <LinearProgress value={progress} />
+        <LinearProgress id="CardItem-LinearProgress" value={progress} />
         <div className="common-details">
           <div className="common-details-items">{progress}% progress</div>
           <div className="common-details-items">{skillC}% skills completed</div>
           <div className="common-details-items">{skillL}% skills left</div>
         </div>
-        <Button icon iconClassName="mdi mdi-telegram" className="card-button"/>
+        <Button icon iconClassName="mdi mdi-telegram" className="card-button" />
       </div>
     )
   }

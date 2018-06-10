@@ -9,7 +9,7 @@ export default class SkillItem extends Component {
     return (
       <div className="skill-item">
         <div className="skill-item-name">{name}</div>
-        <LinearProgress value={progress} />
+        <LinearProgress id="SkillItem-LinearProgress" value={progress} />
         <div className="skill-item-progress">{progress}%</div>
       </div>
     )

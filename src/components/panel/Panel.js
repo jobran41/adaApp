@@ -12,7 +12,7 @@ export default class Panel extends Component {
             <Paper
                 zDepth={1}
                 className={`papers__panel ${className}`}
-                style={{ width: widthLocal }}
+                style={{ width: widthProps ? widthLocal : 'auto' }}
             >
                 <div className="PanelHeader">
                     <div className="PanelHeader-title">

@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Switch, Route, Redirect } from "react-router-dom"
 import { withRouter } from "react-router"
 import { connect } from 'react-redux'
+import windowSize from 'react-window-size'
 
 import * as routes from "libs/constants/routes"
 import TopBar from "../top-bar"
@@ -13,15 +14,22 @@ import SideBar from "../sideBar"
 import Instructor from "../instructor"
 import { dataSideBar } from "../sideBar/helpers"
 import Tutorial from "../tutorial"
-//import Draw from "../draw"
+import Draw from "../draw"
 
 import "./Container.scss"
 
 @withRouter
+@windowSize
 @connect(({ app }) => ({
   sideBarIsTrue: app.topbarCollapsed
 }))
 export default class Container extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      sideBarIsTrue: props.sideBarIsTrue
+    }
+  }
 
   toggleSideBar = isTrue => {
     this.setState({ sideBarIsTrue: !isTrue })
@@ -30,11 +38,20 @@ export default class Container extends Component {
     const { history } = this.props
     history.push("/")
   };
+
+  renderTopBar = () => {
+    const { windowWidth } = this.props
+    if (windowWidth >= 700) {
+      return <TopBar />
+    } else {
+      return <Draw />
+    }
+  }
   render() {
     const { sideBarIsTrue } = this.props
     return (
       <div className="App-container">
-        <TopBar />
+        {this.renderTopBar()}
         <div className="container">
           <div
             className={`${

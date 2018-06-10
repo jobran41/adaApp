@@ -52,7 +52,7 @@ export default class SimpleDrawer extends PureComponent {
         const closeBtn = <Button icon onClick={this.closeDrawer}>{isLeft ? 'arrow_back' : 'close'}</Button>
         return (
             <div>
-                <Button icon onClick={this.openDrawerRight}>menu</Button>
+                <Button className="menuButton" icon onClick={this.openDrawerRight}>menu</Button>
                 <Drawer
                     id="simple-drawer-example"
                     type={Drawer.DrawerTypes.TEMPORARY}

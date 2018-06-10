@@ -12,10 +12,12 @@ export default class EventItem extends Component {
         <div className="event-item-title">{title}</div>
         <div className="event-item-time">{createdAt.time}</div>
         <Checkbox
+          aria-label=""
           id={`event-item-${index}`}
           name="checked[]"
           value={title}
           checked={checked}
+          onChange={() => null}
         />
       </div>
     )

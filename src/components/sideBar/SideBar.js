@@ -79,9 +79,10 @@ class SideBar extends Component {
               <div className="skillProgress">
                 <LinearProgress
                   value={level || 0}
-                  // style={{ height: 100, width: 20 }}
-                  //progressClassName="horizontale-progress"
-                  //progressStyle={value => ({ top: `${100 - value}%`, width: "100%" })}
+                  id="SideBar-LinearProgress"
+                // style={{ height: 100, width: 20 }}
+                //progressClassName="horizontale-progress"
+                //progressStyle={value => ({ top: `${100 - value}%`, width: "100%" })}
                 />
                 <div className="LinearProgress-details">
                   <span>{indicatorMin} % Skills</span>
