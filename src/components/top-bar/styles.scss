@@ -4,10 +4,13 @@
   background-color: white;
   color: $lightGrey;
   display: flex;
-  justify-content: stretch;
+  justify-content: flex-end;
   align-items: center;
   padding: 0 40px;
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 999;
+  top: 0;
   & .md-icon {
     color: $lightGrey;
   }
@@ -18,7 +21,7 @@
     color: $blue;
     font-weight: bold;
     font-size: 35px;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    margin-right: auto;
     /*.topBar-logo-avatar {
             border: none;
             width: 100px;
@@ -26,11 +29,8 @@
         }*/
   }
   .Navigation {
-    flex-grow: 1;
-    text-align: right;
     .menu-withLogin {
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: 0 auto;
       .menuButton {
         height: 55px;
         font-size: 16px;
@@ -50,6 +50,19 @@
       height: 100%;
       width: 24px;
       padding: 0;
+    }
+  }
+  @media (max-width: 1107px) {
+    padding: 0 30px;
+    .Navigation {
+      .menu-withLogin {
+        .menuButton {
+          font-size: 14px;
+          &.md-btn--text {
+            padding: 8px;
+          }
+        }
+      }
     }
   }
 }

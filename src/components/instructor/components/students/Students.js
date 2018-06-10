@@ -45,7 +45,7 @@ export default class Students extends Component {
                 title="Mes Students List"
                 subTitle="See All Student"
                 className="md-cell md-cell--6"
-                iconButton="mdi-fullscreen"
+                iconButton="more_horiz"
             >
                 {this.renderList()}
                 <Button flat onClick={this.addMore} className="panelbutton">Browes More</Button>

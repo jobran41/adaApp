@@ -1,6 +1,7 @@
 .lesson-item {
   background: #fff;
   transition: all ease-in-out 400ms;
+  flex-grow: 1;
   .imgwapper {
     width: 100%;
     max-height: 250px;
