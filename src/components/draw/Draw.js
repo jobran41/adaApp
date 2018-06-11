@@ -7,6 +7,8 @@ import { toggleTopbar } from "modules/app/actions"
 import NavItemLink from './NavItemLink'
 import * as routes from "libs/constants/routes"
 
+import "./Draw.scss"
+
 const navItems = [{
     label: 'Dashboard',
     to: `${routes.Container + routes.Dashboard}`,
@@ -20,24 +22,24 @@ const navItems = [{
 {
     label: 'Aquarium',
     to: `${routes.Container + routes.Aquarium}`,
-    icon: 'dashboard'
+    icon: 'widgets'
 },
 {
     label: 'Instructor',
     to: `${routes.Container + routes.Instructor}`,
-    icon: 'dashboard'
+    icon: 'school'
 },
 {
     label: 'Tuto',
     to: `${routes.Container + routes.Tuto}`,
-    icon: 'dashboard'
+    icon: 'view_quilt'
 },
 ]
 @connect(null, { toggleTopbar })
 export default class SimpleDrawer extends PureComponent {
-    state = { visible: false, position: 'left' };
+    state = { visible: false, position: 'right' };
     openDrawerRight = () => {
-        this.setState({ visible: true, position: 'right' })
+        this.setState({ visible: true, position: 'left' })
     };
 
     closeDrawer = () => {
@@ -49,7 +51,7 @@ export default class SimpleDrawer extends PureComponent {
     };
     componentDidMount() {
         const { windowWidth, toggleTopbar } = this.props
-        if (windowWidth !== 0 && windowWidth <= 700) {
+        if (windowWidth !== 0 && windowWidth <= 995) {
             toggleTopbar(true)
         }
     }
@@ -59,7 +61,7 @@ export default class SimpleDrawer extends PureComponent {
 
         const closeBtn = <Button icon onClick={this.closeDrawer}>{isLeft ? 'arrow_back' : 'close'}</Button>
         return (
-            <div>
+            <div className="drowbar">
                 <Button className="menuButton" icon onClick={this.openDrawerRight}>menu</Button>
                 <Drawer
                     id="simple-drawer-example"
