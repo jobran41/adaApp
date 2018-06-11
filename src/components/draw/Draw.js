@@ -33,7 +33,9 @@ const navItems = [{
     icon: 'dashboard'
 },
 ]
-@connect(null, { toggleTopbar })
+@connect(({ app }) => ({
+    sideBarIsTrue: app.topbarCollapsed
+}), { toggleTopbar })
 export default class SimpleDrawer extends PureComponent {
     state = { visible: false, position: 'left' };
     openDrawerRight = () => {
@@ -53,6 +55,20 @@ export default class SimpleDrawer extends PureComponent {
             toggleTopbar(true)
         }
     }
+    onToggleClick = (collapsed) => {
+        const { toggleTopbar } = this.props
+        toggleTopbar(collapsed)
+    };
+    renderTopBar = () => {
+        const { toggleTopbar, sideBarIsTrue } = this.props
+        return (
+            <div className="topBar">
+                <Button className="menuButton" icon onClick={this.openDrawerRight}>menu</Button>
+                <div className="topBar-logo"><span>ada.</span></div>
+                <Button className="menuButton" icon onClick={() => toggleTopbar(sideBarIsTrue)}>menu</Button>
+            </div>
+        )
+    }
     render() {
         const { visible, position } = this.state
         const isLeft = position === 'left'
@@ -60,7 +76,8 @@ export default class SimpleDrawer extends PureComponent {
         const closeBtn = <Button icon onClick={this.closeDrawer}>{isLeft ? 'arrow_back' : 'close'}</Button>
         return (
             <div>
-                <Button className="menuButton" icon onClick={this.openDrawerRight}>menu</Button>
+
+                {this.renderTopBar()}
                 <Drawer
                     id="simple-drawer-example"
                     type={Drawer.DrawerTypes.TEMPORARY}
